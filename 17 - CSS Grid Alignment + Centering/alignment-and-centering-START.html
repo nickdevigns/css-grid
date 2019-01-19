@@ -14,13 +14,13 @@
     <div class="itm itm2">2</div>
     <div class="itm itm3">3</div>
     <div class="itm itm4">4</div>
-    <div class="itm itm5">5</div>
+    <div class="itm itm5">Nick is Cool</div>
     <div class="itm itm6">6</div>
     <div class="itm itm7">7</div>
     <div class="itm itm8">8</div>
     <div class="itm itm9">9</div>
     <div class="itm itm10">10</div>
-    <div class="itm itm11">11</div>
+    <!-- <div class="itm itm11">11</div>
     <div class="itm itm12">12</div>
     <div class="itm itm13">13</div>
     <div class="itm itm14">14</div>
@@ -32,7 +32,7 @@
     <div class="itm itm20">20</div>
     <div class="itm itm21">21</div>
     <div class="itm itm22">22</div>
-    <div class="itm itm23">23</div>
+    <div class="itm itm23">Nick is Cool</div>
     <div class="itm itm24">24</div>
     <div class="itm itm25">25</div>
     <div class="itm itm26">26</div>
@@ -49,28 +49,50 @@
     <div class="itm itm37">37</div>
     <div class="itm itm38">38</div>
     <div class="itm itm39">39</div>
-    <div class="itm itm40">40</div>
+    <div class="itm itm40">40</div> -->
   </div>
 
   <style>
     /*
-      justify-items:
-      align-items:
 
-      justify-content:
-      align-content:
+      justify-* is row (x) horizontal axis
+      align-* is column (y) vertical axis
 
-      align-self:
-      justify-self:
+      justify-items: This property value (stretch | center | start | end => full width | center-justified | left-justified | right-justified) will apply to the grid items horizontally within each the container row cell.
 
-      justify-* is row axis
-      align-* is column axis
+      align-items: This property value (stretch | center | start | end => full height | vertical-center | vertical-top | vertical-bottom) will apply to the grid items vertically within each the container row cell.
+
+      justify-content: This property value (start | end | center | stretch | space-around | space-between | space-evenly => left-justified | right-justified | center-justified | full width | space-around | space-between | space-evenly) applies to the entire grid size width if less than the grid container width.
+      align-content: This property value (start | end | center | stretch | space-around | space-between | space-evenly => vertical-top | vertical-bottom | vertical-center | full height | space-around | space-between | space-evenly) applies to the entire grid size height if less than the grid container height.
+
+      justify-self: This property value (stretch | center | start | end => full width | center-justified | left-justified | right-justified) applies to a individual grid item within a single cell.
+
+      align-self: This property value (stretch | center | start | end => full height | vertical-center | vertical-top | vertical-bottom) applies to a individual grid item within a single cell
+
+      
     */
 
     .container {
       display: grid;
       grid-gap: 20px;
-      grid-template-columns: repeat(10, 1fr);
+      border: 10px solid var(--yellow);
+      grid-template-columns: repeat(5, 100px);
+      /*grid-template-rows: repeat(5, 100px);*/
+      height: 500px;
+      /*justify-items: center;
+      align-items: center;*/
+      place-items: stretch stretch;
+      justify-content: space-between;
+      align-content: space-between;
+    }
+
+    .itm {
+      background: white;
+    }
+
+    .itm5 {
+      justify-self: center;
+      align-self: center;
     }
   </style>
 </body>
